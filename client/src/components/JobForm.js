@@ -9,9 +9,7 @@ function JobForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const companyId = "pVbRRBQtMVw6lUAkj1k43"; // FIXME:
-    const job = await createJob({ title, companyId, description });
-    console.log("job created: ", job);
+    const job = await createJob({ title, description });
     navigate(`/jobs/${job.id}`);
   };
 
